@@ -34,7 +34,7 @@ class NewsViewModel @Inject constructor(
 ) : ViewModel() {
 
     private val _savedNews = MutableStateFlow<List<SavedNews>>(emptyList())
-    val savedNews: StateFlow<List<SavedNews>> = _savedNews
+    val savedNews: StateFlow<List<SavedNews>> get() = _savedNews
 
     private val _state = MutableStateFlow(NewsState())
     val state: StateFlow<NewsState> = _state.asStateFlow()
@@ -139,9 +139,11 @@ class NewsViewModel @Inject constructor(
     }
     suspend fun addNews(news: SavedNews) {
         repository.addNews(news)
+        Log.d("ROOM", "Added: $news")
     }
 
     suspend fun deleteNews(news: SavedNews) {
         repository.deleteNews(news)
+        Log.d("ROOM", "Deleted: $news")
     }
 }

@@ -1,12 +1,9 @@
 package com.example.mynews.presentation.screen
 
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.OverscrollEffect
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.gestures.FlingBehavior
-import androidx.compose.foundation.gestures.ScrollableDefaults
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -24,8 +21,10 @@ import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.foundation.overscroll
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Phone
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -51,8 +50,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
 import com.example.mynews.R
+import com.example.mynews.data.local.SavedNews
 import com.example.mynews.data.model.Article
 import com.example.mynews.presentation.components.CustomHorizontalDivider
 import com.example.mynews.presentation.components.ImageOfNews
@@ -62,6 +63,7 @@ import com.example.mynews.presentation.navigation.Screen
 import com.example.mynews.presentation.viewmodel.NewsViewModel
 import com.example.mynews.ui.theme.customGray
 import com.example.mynews.ui.theme.sfFont
+import kotlinx.coroutines.launch
 
 @Composable
 fun MainScreen(
@@ -72,6 +74,7 @@ fun MainScreen(
     val news: List<Article> = viewModel.newsList.value
     val listState = rememberLazyListState()
     val state by viewModel.state.collectAsState()
+    val savedNews by viewModel.savedNews.collectAsState()
     LaunchedEffect(news) {
         if (state.onSuccess && news.isNotEmpty()) {
             listState.animateScrollToItem(0)
@@ -93,7 +96,7 @@ fun MainScreen(
             }
 
             state.onSuccess -> {
-                SuccessScreen(listState, paddingValues, viewModel, news, navController)
+                SuccessScreen(listState, paddingValues, viewModel, news, navController, savedNews)
             }
         }
     }
@@ -150,7 +153,8 @@ fun SuccessScreen(
     paddingValues: PaddingValues,
     viewModel: NewsViewModel,
     news: List<Article>,
-    navController: NavController
+    navController: NavController,
+    savedNews: List<SavedNews>
 ) {
     LazyColumn(
         modifier = Modifier
@@ -179,7 +183,7 @@ fun SuccessScreen(
         }
 
         items(news) { article ->
-            NewsCard(article, navController)
+            NewsCard(article, navController, viewModel, savedNews)
         }
     }
 }
@@ -222,8 +226,10 @@ fun Header(navController: NavController) {
                 navController.navigate(Screen.Favourites.route)
             }
         ) {
-            Icon(painter = painterResource(id = R.drawable.favourite),
-                contentDescription = null)
+            Icon(
+                painter = painterResource(id = R.drawable.favourite),
+                contentDescription = null
+            )
         }
     }
 }
@@ -368,38 +374,78 @@ fun CardCategory(category: String, viewModel: NewsViewModel) {
 }
 
 @Composable
-fun NewsCard(news: Article, navController: NavController) {
+fun NewsCard(
+    news: Article, navController: NavController,
+    viewModel: NewsViewModel,
+    savedNews: List<SavedNews>
+) {
+    val existingSavedNews = savedNews.find { it.url == news.url }
+    val isSelected = existingSavedNews != null
+
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .padding(top = 20.dp)
     ) {
-
         ImageOfNews(news)
 
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(top = 15.dp),
-            verticalAlignment = Alignment.CenterVertically,
+            verticalAlignment = Alignment.Top,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             NewsTitle(
                 news, modifier = Modifier.weight(1f),
                 sizePair = 20.sp to 20.sp
             )
-
-            IconButton(
-                onClick = {
-                    navController.navigate(Screen.DetailScreen.route + "/${news.title}")
-                }
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Icon(
-                    painter = painterResource(R.drawable.diagonal_arrow),
-                    contentDescription = "More details",
+                IconButton(
+                    onClick = {
+                        viewModel.viewModelScope.launch {
+                            if (isSelected) {
+                                viewModel.deleteNews(existingSavedNews)
+                            } else {
+                                val saved = SavedNews(
+                                    title = news.title,
+                                    author = news.author,
+                                    description = news.description,
+                                    url = news.url,
+                                    urlToImage = news.urlToImage,
+                                    publishedAt = news.publishedAt,
+                                    content = news.content
+                                )
+                                viewModel.addNews(saved)
+                            }
+                        }
+                    },
                     modifier = Modifier.size(25.dp)
-                )
+                ) {
+                    if (isSelected) {
+                        //Todo icon filled
+                        Icon(imageVector = Icons.Default.Star, contentDescription = null)
+                    } else {
+                        //todo icon empty
+                        Icon(imageVector = Icons.Default.Phone, contentDescription = null)
+                    }
+                }
+
+                IconButton(
+                    onClick = {
+                        navController.navigate(Screen.DetailScreen.route + "/${news.title}")
+                    }
+                ) {
+                    Icon(
+                        painter = painterResource(R.drawable.diagonal_arrow),
+                        contentDescription = "More details",
+                        modifier = Modifier.size(25.dp)
+                    )
+                }
             }
+
         }
         Spacer(modifier = Modifier.height(30.dp))
     }
