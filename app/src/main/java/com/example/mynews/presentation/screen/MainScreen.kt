@@ -415,7 +415,6 @@ fun NewsCard(
                                     description = news.description,
                                     url = news.url,
                                     urlToImage = news.urlToImage,
-                                    publishedAt = news.publishedAt,
                                     content = news.content
                                 )
                                 viewModel.addNews(saved)

@@ -39,15 +39,18 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.example.mynews.R
 import com.example.mynews.data.local.SavedNews
 import com.example.mynews.data.model.Article
+import com.example.mynews.presentation.components.NewsTitle
 import com.example.mynews.presentation.navigation.Screen
 import com.example.mynews.presentation.viewmodel.NewsViewModel
 import com.example.mynews.ui.theme.customGray
+import com.example.mynews.ui.theme.sfFont
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalFoundationApi::class)
@@ -80,8 +83,8 @@ fun Favourites(viewModel: NewsViewModel, navController: NavController) {
 fun SavedNewsCard(news: SavedNews, navController: NavController, viewModel: NewsViewModel) {
     Card(
         modifier = Modifier
-            .padding(8.dp)
-            .fillMaxWidth(),
+            .fillMaxWidth()
+            .padding(top = 20.dp),
         shape = RoundedCornerShape(12.dp),
         elevation = CardDefaults.cardElevation(4.dp)
     ) {
@@ -97,19 +100,24 @@ fun SavedNewsCard(news: SavedNews, navController: NavController, viewModel: News
 
             Row(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 12.dp, vertical = 8.dp),
+                    .fillMaxWidth(),
+                verticalAlignment = Alignment.Top,
+                horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Text(
                     text = news.title,
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.SemiBold,
-                    modifier = Modifier.weight(1f)
+                    lineHeight = 20.sp,
+                    fontSize = 20.sp,
+                    fontFamily = sfFont,
+                    letterSpacing = 0.7.sp,
+                    modifier = Modifier.weight(1f).padding(5.dp)
                 )
+
                 Column(
-                    modifier = Modifier.fillMaxHeight(),
-                    verticalArrangement = Arrangement.SpaceBetween
-                ) {
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.SpaceBetween,
+                    modifier = Modifier.padding(horizontal = 20.dp, vertical = 5.dp)
+                ){
                     IconButton(
                         onClick = {
                             viewModel.viewModelScope.launch {
@@ -119,8 +127,8 @@ fun SavedNewsCard(news: SavedNews, navController: NavController, viewModel: News
                         modifier = Modifier.size(25.dp)
                     ) {
                         Icon(imageVector = Icons.Default.Star, contentDescription = null)
-
                     }
+                    Spacer(modifier = Modifier.padding(vertical = 5.dp))
                     IconButton(
                         onClick = {
                             navController.navigate(Screen.DetailScreen.route + "/${news.title}")
@@ -128,8 +136,9 @@ fun SavedNewsCard(news: SavedNews, navController: NavController, viewModel: News
                         modifier = Modifier.size(25.dp)
                     ) {
                         Icon(
-                            painter = painterResource(R.drawable.up_right_arrow),
-                            contentDescription = "Open"
+                            painter = painterResource(R.drawable.diagonal_arrow),
+                            contentDescription = "Open",
+                            modifier = Modifier.size(25.dp)
                         )
                     }
                 }
