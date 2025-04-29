@@ -5,6 +5,7 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.mynews.APIKEY
 import com.example.mynews.data.local.NewsRepository
 import com.example.mynews.data.local.SavedNews
 import com.example.mynews.data.model.Article
