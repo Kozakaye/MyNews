@@ -11,7 +11,6 @@ import com.example.mynews.data.local.SavedNews
 import com.example.mynews.data.model.Article
 import com.example.mynews.data.model.Main
 import com.example.mynews.data.remote.NewsService
-import com.example.mynews.presentation.APIKEY
 import com.example.mynews.presentation.state.NewsState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
