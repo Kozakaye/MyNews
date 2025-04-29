@@ -23,7 +23,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Phone
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -424,11 +423,10 @@ fun NewsCard(
                     modifier = Modifier.size(25.dp)
                 ) {
                     if (isSelected) {
-                        //Todo icon filled
                         Icon(imageVector = Icons.Default.Star, contentDescription = null)
                     } else {
-                        //todo icon empty
-                        Icon(imageVector = Icons.Default.Phone, contentDescription = null)
+                        Icon(painter = painterResource(R.drawable.empty_star_), contentDescription = null,
+                            modifier = Modifier.size(20.dp))
                     }
                 }
 

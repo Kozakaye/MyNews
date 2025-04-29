@@ -72,7 +72,7 @@ fun DetailScreen(
                 .padding(horizontal = 18.dp)
         ) {
             stickyHeader {
-                TopNavBar(navController)
+                TopNavBar(navController, "San")
 
             }
             item {
@@ -93,7 +93,7 @@ fun DetailScreen(
 }
 
 @Composable
-fun TopNavBar(navController: NavController) {
+fun TopNavBar(navController: NavController, titleName: String) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -111,7 +111,7 @@ fun TopNavBar(navController: NavController) {
         }
 
         Text(
-            text = "San",
+            text = titleName,
             fontSize = 18.sp,
             fontFamily = sfFont,
             letterSpacing = 0.7.sp,

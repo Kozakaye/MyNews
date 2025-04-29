@@ -1,5 +1,9 @@
 [
     {
+        "merged": "com.example.mynews.app-debug-65:/drawable_empty_star_.png.flat",
+        "source": "com.example.mynews.app-main-67:/drawable/empty_star_.png"
+    },
+    {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\drawable_yellowstar.png.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\drawable\\yellowstar.png"
     },
@@ -26,6 +30,10 @@
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\drawable_search1.png.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\drawable\\search1.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\drawable_white_star.png.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\drawable\\white_star.png"
     },
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\drawable_diagonal_arrow.png.flat",
@@ -60,10 +68,6 @@
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.mynews.app-debug-65:/drawable_favourite.png.flat",
-        "source": "com.example.mynews.app-main-67:/drawable/favourite.png"
-    },
-    {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\drawable__04.png.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\drawable\\_04.png"
     },
@@ -94,6 +98,10 @@
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\drawable_favourite.png.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\drawable\\favourite.png"
     },
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\mipmap-mdpi_ic_launcher_round.webp.flat",

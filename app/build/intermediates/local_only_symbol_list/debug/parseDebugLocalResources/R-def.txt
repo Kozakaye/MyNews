@@ -9,12 +9,14 @@ color teal_700
 color white
 drawable _04
 drawable diagonal_arrow
+drawable empty_star_
 drawable favourite
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable search1
 drawable shape_13706738
 drawable up_right_arrow
+drawable white_star
 drawable wishlist
 drawable yellowstar
 font helvetica_thin

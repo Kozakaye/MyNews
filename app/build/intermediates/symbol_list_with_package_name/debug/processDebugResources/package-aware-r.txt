@@ -86,6 +86,7 @@ dimen notification_top_pad_large_text
 drawable _04
 drawable abc_vector_test
 drawable diagonal_arrow
+drawable empty_star_
 drawable favourite
 drawable ic_call_answer
 drawable ic_call_answer_low
@@ -111,6 +112,7 @@ drawable notify_panel_notification_icon_bg
 drawable search1
 drawable shape_13706738
 drawable up_right_arrow
+drawable white_star
 drawable wishlist
 drawable yellowstar
 font helvetica_thin

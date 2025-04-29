@@ -85,6 +85,7 @@ int dimen notification_top_pad_large_text 0x7f050015
 int drawable _04 0x7f06001b
 int drawable abc_vector_test 0x7f060001
 int drawable diagonal_arrow 0x7f06001a
+int drawable empty_star_ 0x7f060022
 int drawable favourite 0x7f060020
 int drawable ic_call_answer 0x7f060002
 int drawable ic_call_answer_low 0x7f060003
@@ -110,6 +111,7 @@ int drawable notify_panel_notification_icon_bg 0x7f060017
 int drawable search1 0x7f060018
 int drawable shape_13706738 0x7f06001c
 int drawable up_right_arrow 0x7f060019
+int drawable white_star 0x7f060021
 int drawable wishlist 0x7f06001d
 int drawable yellowstar 0x7f06001f
 int font helvetica_thin 0x7f070000
