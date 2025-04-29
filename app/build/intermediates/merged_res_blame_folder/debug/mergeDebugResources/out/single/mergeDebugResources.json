@@ -1,0 +1,106 @@
+[
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\drawable_yellowstar.png.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\drawable\\yellowstar.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\font_helvetica_thin.ttf.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\font\\helvetica_thin.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\drawable_up_right_arrow.png.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\drawable\\up_right_arrow.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\drawable_search1.png.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\drawable\\search1.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\drawable_diagonal_arrow.png.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\drawable\\diagonal_arrow.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\font_sf_pro.ttf.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\font\\sf_pro.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\drawable_wishlist.png.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\drawable\\wishlist.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.mynews.app-debug-65:/drawable_favourite.png.flat",
+        "source": "com.example.mynews.app-main-67:/drawable/favourite.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\drawable__04.png.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\drawable\\_04.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-debug-65:\\drawable_shape_13706738.png.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.11.1\\com.example.mynews.app-main-67:\\drawable\\shape_13706738.png"
+    }
+]
