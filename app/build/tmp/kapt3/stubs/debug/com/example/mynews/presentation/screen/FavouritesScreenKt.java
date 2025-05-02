@@ -3,17 +3,13 @@ package com.example.mynews.presentation.screen;
 import androidx.compose.foundation.ExperimentalFoundationApi;
 import androidx.compose.foundation.layout.Arrangement;
 import androidx.compose.material.icons.Icons;
-import androidx.compose.material3.CardDefaults;
 import androidx.compose.runtime.Composable;
 import androidx.compose.ui.Alignment;
 import androidx.compose.ui.Modifier;
 import androidx.compose.ui.layout.ContentScale;
-import androidx.compose.ui.text.font.FontWeight;
-import androidx.compose.ui.text.style.TextOverflow;
 import androidx.navigation.NavController;
 import com.example.mynews.R;
 import com.example.mynews.data.local.SavedNews;
-import com.example.mynews.data.model.Article;
 import com.example.mynews.presentation.navigation.Screen;
 import com.example.mynews.presentation.viewmodel.NewsViewModel;
 

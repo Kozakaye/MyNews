@@ -269,12 +269,12 @@ fun TextBox() {
 
 @Composable
 fun CustomTextField(modifier: Modifier = Modifier, viewModel: NewsViewModel) {
-    var text by remember { mutableStateOf("") }
+    val input = viewModel.inputValue.value
     TextField(
-        value = text,
+        value = input,
         onValueChange = {
-            text = it
-            viewModel.updateQuery(text)
+            viewModel.updateInput(it)
+            viewModel.updateQuery()
         },
         modifier = modifier
             .fillMaxWidth()

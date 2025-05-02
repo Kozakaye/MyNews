@@ -1,6 +1,7 @@
 package com.example.mynews.presentation.viewmodel
 
 import android.util.Log
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
@@ -32,6 +33,9 @@ class NewsViewModel @Inject constructor(
     private val apiService: NewsService,
     private val repository: NewsRepository,
 ) : ViewModel() {
+
+    private val _inputValue: MutableState<String> = mutableStateOf("")
+    var inputValue: State<String> = _inputValue
 
     private val _savedNews = MutableStateFlow<List<SavedNews>>(emptyList())
     val savedNews: StateFlow<List<SavedNews>> get() = _savedNews
@@ -126,8 +130,12 @@ class NewsViewModel @Inject constructor(
         handleApiCall(call)
     }
 
-    fun updateQuery(newQuery: String) {
-        _query.value = newQuery
+    fun updateQuery() {
+        _query.value = inputValue.value
+    }
+
+    fun updateInput(newInput: String){
+        _inputValue.value = newInput
     }
 
     fun retry(){

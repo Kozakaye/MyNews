@@ -22,6 +22,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.filled.KeyboardArrowLeft
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -107,7 +108,7 @@ fun TopNavBar(navController: NavController, titleName: String) {
                 navController.navigateUp()
             }
         ) {
-            Icon(imageVector = Icons.Default.KeyboardArrowLeft, contentDescription = "Go back")
+            Icon(imageVector = Icons.AutoMirrored.Default.KeyboardArrowLeft, contentDescription = "Go back")
         }
 
         Text(
